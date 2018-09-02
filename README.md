@@ -40,7 +40,7 @@ Example:
 
 | Command | What it does                                                 |
 | :-----: | ------------------------------------------------------------ |
-|   `|`   | Joins two sets together, with no duplicates.                 |
+|  `\|`   | Joins two sets together, with no duplicates.                 |
 |   `&`   | Intersection of two sets, returns items that exists in both. |
 
 ## Functions
@@ -56,4 +56,37 @@ def my_function ():
 
 # Using function
 myFunction()
+```
+
+### \*args
+
+Using `*args` collects the remaining arguments in a function into a tuple.
+
+Example:
+
+```python
+def sum_all_nums (*args):
+  total = 0
+  for num in args:
+    total += num
+  return total
+
+sum_all_nums(12, 14, 6)
+# returns 32
+```
+
+### \*\*kwargs
+
+Gathers remaining arguments as a dictionary.
+
+Example:
+
+```python
+def fav_colors (**kwargs):
+  return kwargs
+
+fav_colors(first="purple", second="white", third="red")
+
+# returns
+# { "first": "purple", "second"="white", "third"="red" }
 ```
